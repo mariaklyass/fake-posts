@@ -3,15 +3,21 @@ import MyButton from "./UI/MyButton/MyButton";
 
 export default function PostItem(props) {
   return (
-    <div className="bg-stone-200 border border-teal-900 m-2 p-3 flex justify-between items-center">
-      <div>
-        <h3 className="font-semibold">
-          {props.item.id}. {props.item.title}
-        </h3>
-        <p>{props.item.body}</p>
+    <div className="bg-[#b49499]/20 border border-[#b49499]/30 rounded-md drop-shadow-xl m-2 p-3 max-w-sm">
+      <div className="grid">
+        <img alt="image" src={props.image} />
+        <div>
+          <h3 className="font-semibold capitalize">
+            {/* {props.item.id}. */}
+            {props.item.title}
+          </h3>
+          <p className="text-justify">{props.item.body}</p>
+          <div className="flex gap-2 mt-2">
+            <MyButton>Read</MyButton>
+            <MyButton onClick={() => props.remove(props.item)}>Delete</MyButton>
+          </div>
+        </div>
       </div>
-
-      <MyButton onClick={() => props.remove(props.item)}>Delete</MyButton>
     </div>
   );
 }

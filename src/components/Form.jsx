@@ -55,7 +55,7 @@ export default function Form() {
   };
 
   return (
-    <div className="bg-stone-800/90 drop-shadow-xl mx-4 p-8 rounded-md flex flex-col justify-center items-center">
+    <div className="drop-shadow-xl mx-4 p-8 rounded-md flex flex-col justify-center items-center bg-[#ded0d2]/30  text-stone-900 relative pt-28 sm:pt-36 ">
       <MyButton onClick={() => setModal(true)}>Create a post</MyButton>
       <MyModal visible={modal} setVisible={setModal}>
         <PostForm create={createPost} />
