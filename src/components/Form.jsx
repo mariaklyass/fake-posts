@@ -55,18 +55,20 @@ export default function Form() {
   };
 
   return (
-    <div className="drop-shadow-xl mx-4 p-8 rounded-md flex flex-col justify-center items-center bg-[#ded0d2]/30  text-stone-900 relative pt-28 sm:pt-36 ">
-      <MyButton onClick={() => setModal(true)}>Create a post</MyButton>
-      <MyModal visible={modal} setVisible={setModal}>
-        <PostForm create={createPost} />
-      </MyModal>
+    <div className="drop-shadow-xl mx-4 mt-2 p-8 rounded-md flex flex-col justify-center items-center bg-[#ded0d2]/20 text-stone-900 relative pt-2 sm:pt-3 ">
+      <div>
+        <MyButton onClick={() => setModal(true)}>Create a post</MyButton>
+        <MyModal visible={modal} setVisible={setModal}>
+          <PostForm create={createPost} />
+        </MyModal>
 
-      <hr style={{ margin: "15px 0" }} />
-      <PostFilter filter={filter} setFilter={setFilter} />
+        <hr style={{ margin: "15px 0" }} />
+        <PostFilter filter={filter} setFilter={setFilter} />
+      </div>
 
       {postError && (
         <h2 className="text-stone-100">
-          Unfortunately, there was an error.. ${postError}{" "}
+          Unfortunately, there was an error.. {postError}{" "}
         </h2>
       )}
 

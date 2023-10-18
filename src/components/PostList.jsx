@@ -15,7 +15,7 @@ export default function PostList({ posts, title, remove }) {
   return (
     <div>
       <div className="flex justify-center">
-        <h1 className="text-center font-bold text-lg text-teal-900 bg-stone-200 w-64 flex justify-center rounded-md mt-4">
+        <h1 className="text-center font-bold text-lg text-stone-800 bg-[#946b6f]/30 w-64 flex justify-center rounded-md mt-4">
           {title}
         </h1>
       </div>
@@ -34,7 +34,8 @@ export default function PostList({ posts, title, remove }) {
             // }
             image={randomImg + Math.random() * 1000}
             remove={remove}
-            // number={index + 1}
+            number={index + 1}
+            // number={index}
             item={post}
             key={post.id}
           />

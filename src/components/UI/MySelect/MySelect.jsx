@@ -2,7 +2,11 @@ import React from "react";
 
 const MySelect = ({ options, defaultValue, value, onChange }) => {
   return (
-    <select value={value} onChange={(event) => onChange(event.target.value)}>
+    <select
+      value={value}
+      onChange={(event) => onChange(event.target.value)}
+      className="rounded-md"
+    >
       <option disabled value="">
         {defaultValue}
       </option>
