@@ -2,7 +2,7 @@
 
 This web app displays posts using data fetched from an API (JSONPlaceholder). 
 
-The functionality is quite basic, yet sufficient for a standard web app: it includes sorting, searching, filtering, deleting the posts or creating new ones. The project is based on fundamental React concepts such as JSX, state, props, functional components, hooks, component lifecycle, routing, etc.
+The functionality is typical for a standard CRUD web app: it includes sorting, searching, filtering, deleting the posts or creating new ones. The project is based on fundamental React concepts such as JSX, state, props, functional components, hooks, component lifecycle, routing, etc.
 Some decomposition has been made in order to separate logic and UI, hence there are some custom hooks, custom-made UI library and several components.
 
 * the data is fetched with Axios library.
